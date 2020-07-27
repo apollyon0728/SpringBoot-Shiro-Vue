@@ -24,6 +24,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <!--<exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>-->
+                <exclusion>
+                    <groupId> org.hibernate</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,6 +67,26 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>1.5.3</version>
+        </dependency>
+
+        <!-- 使用数据分片
+        https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/usage/sharding/yaml/-->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
         </dependency>
 
     </dependencies>

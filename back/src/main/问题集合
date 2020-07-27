@@ -1,0 +1,19 @@
+1、多用户区分登录信息
+
+2、分布式系统登录信息存储
+
+3、session信息
+
+
+
+https://segmentfault.com/q/1010000018210376
+
+
+启动报错：
+1. ShardingException: Can't find datasource type!
+添加配置
+<dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
